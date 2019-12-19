@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.flexGrow {
+  font-size: 12px;
+  flex-grow: 1;
+  margin: 10px;
+  width: 80%;
+}
+
+.header {
+  font-size: 20px;
+  padding: 20px;
+  margin: 20px;
+  border-bottom: 2px solid orange;
+  color : orange;
+}
