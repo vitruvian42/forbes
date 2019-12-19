@@ -15,7 +15,7 @@ export default class Layout extends React.Component {
     return <main>
       <Switch>
         <Route exact path='/' component={List}/>
-        <Route exact path='/blog' component={Blog}/>
+        <Route exact path='/blog/:id' component={Blog}/>
       </Switch>
     </main>
   }

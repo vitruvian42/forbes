@@ -15,8 +15,8 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "auto",
   },
   image: {
-    width: 128,
-    height: 128,
+    width: 98,
+    height: 98,
   },
   img: {
     margin: 'auto',
@@ -24,11 +24,14 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '100%',
     maxHeight: '100%',
   },
-  desc: {
-      marginRight: "100px"
+  xs: {
+      marginRight: "30px"
   },
   uppercase: {
       textTransform: "capitalize"
+  },
+  pointer: {
+      cursor: "pointer"
   }
 }));
 
@@ -39,9 +42,9 @@ export default function Element(props) {
   return (
     <Paper className={classes.paper}>
         <Grid container spacing={2}>
-            <Grid item xs={12} sm container>
+            <Grid item xs={12} sm container  onClick={() => props.openBlog(props.ind)}  className={classes.pointer}>
                 <Grid item xs container direction="column" spacing={2}>
-                    <Grid item xs>
+                    <Grid item xs className={classes.xs}>
                     <Typography variant="body3" gutterBottom>
                         {new Date(blog.published_date).toString()} <strong className={classes.uppercase}>{blog.category}</strong>
                         <br/><br/>
@@ -50,7 +53,7 @@ export default function Element(props) {
                         <strong className={classes.uppercase}>{blog.title}</strong>
                         <br/>
                     </Typography>
-                    <Typography gutterBottom variant="body2"className={classes.desc}>
+                    <Typography gutterBottom variant="body3">
                         {blog.description}
                         <br/><br/>
                     </Typography>

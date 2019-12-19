@@ -3,7 +3,7 @@
 }
 
 .flexGrow {
-  font-size: 12px;
+  font-size: 10px;
   flex-grow: 1;
   margin: 10px;
   width: 80%;
@@ -11,8 +11,19 @@
 
 .header {
   font-size: 20px;
-  padding: 20px;
+  padding: 15px;
   margin: 20px;
   border-bottom: 2px solid orange;
   color : orange;
+}
+
+.button-centered{
+  width: 80%;
+  margin: 20px;
+  text-align: center;
+}
+
+.button-color {
+  background-color: #060606 !important;
+  color: white !important;
 }
