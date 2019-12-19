@@ -17,8 +17,6 @@ export function getBlogs() {
           console.log(err)
         })
     }
-    
-  }
 }
 
 export function updateLikesCount(ind) {
