@@ -3,13 +3,15 @@ import store from '../store';
 
 export function getBlogs() {
   return function(dispatch) {
-    if(store.getState().blogs.blog.length == 0) {
+    
       axios.get('src/actions/blogs.json').then(
         response => {
-          dispatch({
-            type: "CREATE_NEW_BLOG_STORE",
-            payload: response.data
-          })
+          if(response.data.length > store.getState().blogs.blog.length) {
+            dispatch({
+              type: "CREATE_NEW_BLOG_STORE",
+              payload: response.data
+            })
+          }
 
         }).catch(err => {
           console.log(err)
